@@ -1,4 +1,4 @@
-# cities-and-towns-of-Hungary
+# cities-and-towns-of-hungary
 Get the cities and towns of Hungray names, and latitude, longitude bounds
 
 #Requirements
