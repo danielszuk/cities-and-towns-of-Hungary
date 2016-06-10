@@ -1,5 +1,5 @@
 # cities-and-towns-of-hungary
-Get the cities and towns of Hungray names, and latitude, longitude bounds
+Get the cities and towns of Hungary names, and latitude, longitude bounds
 
 #Requirements
 1. You need node.js installed on your system ([Node.js](https://nodejs.org))
