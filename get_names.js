@@ -5,7 +5,7 @@ var request = require('sync-request'),
     towns = [];
 
 function getaPage(url, popLimit) {
-    var res,
+    var res = request('GET', 'https://hu.wikipedia.org' + url),
         lines,
         ph = 0,
         curCity,
@@ -13,7 +13,6 @@ function getaPage(url, popLimit) {
         nextPage,
         i;
 
-    res = request('GET', 'https://hu.wikipedia.org' + url);
     if (res.statusCode === 200) {
         lines = res.body.toString().split("\n");
         for (i = 0; i < lines.length; i += 1) {
@@ -74,6 +73,9 @@ function getaPage(url, popLimit) {
                     //Spaceektől megtisztítjuk a stringet és utána konvertáljuk numberré
                     if (parseInt(lines[i].split(">")[1].split("<")[0].replace(/\s/g, ''), 10) > popLimit) {
                         towns.push(curCity);
+                        process.stdout.clearLine();
+                        process.stdout.cursorTo(0);
+                        process.stdout.write(curCity);
                     }
                     ph -= 2;
                 }

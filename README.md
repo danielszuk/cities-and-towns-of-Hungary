@@ -6,4 +6,9 @@ Get the cities and towns of Hungray names, and latitude, longitude bounds
 
 #Usage
 1. Run the alg.js file (`node alg`)
-2. The towns names and datas saved to **dist/towns.js**
+2. The towns names saved to **dist/towns.js** (array format)
+3. The towns bounds saved to **dist/bounds.js** (object format)
+
+#Options and defaults
+1. In the 5. line of **alg.js**, you can set the population limit (the town which population is below the limit, not added to the list)
+**By default the population limit is 5000.**
