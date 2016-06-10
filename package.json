@@ -1,0 +1,22 @@
+{
+  "name": "cities-and-towns-of-hungary",
+  "version": "1.0.0",
+  "description": "Get the cities and towns of Hungray names, and latitude, longitude bounds",
+  "main": "pull.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielszuk/cities-and-towns-of-Hungary.git"
+  },
+  "author": "Dániel Szük",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielszuk/cities-and-towns-of-Hungary/issues"
+  },
+  "homepage": "https://github.com/danielszuk/cities-and-towns-of-Hungary#readme",
+  "dependencies": {
+    "sync-request": "^3.0.1"
+  }
+}
