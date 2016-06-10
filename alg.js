@@ -11,10 +11,10 @@ var get_names = require('./get_names'),
 
 towns = get_names(popLimit);
 
-file = fs.createWriteStream('dist/towns.js');
+file = fs.createWriteStream('output/towns.js');
 file.write("towns=['");
 file.write(towns.join("','"));
 file.write("']");
 file.end();
 
-console.log(towns.length + " towns data succesfully writed to dist/towns.js");
+console.log(towns.length + " towns data succesfully writed to output/towns.js");
