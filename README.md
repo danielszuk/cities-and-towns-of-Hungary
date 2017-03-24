@@ -12,5 +12,5 @@ Get the cities and towns of Hungary names, and latitude, longitude bounds
 3. The towns bounds saved to **output/bounds.js** (object format)
 
 #Options and defaults
-1. With the limit parameter (e.g. `node app -limit=15000`) you can set the population limit (the town which population is below the limit, not added to the list)
+1. With the limit parameter (e.g. `node app limit=15000`) you can set the population limit (the town which population is below the limit, not added to the list)
 **By default the population limit is 0.**
