@@ -1,17 +1,28 @@
-/*jslint node: true, nomen: true*/
 "use strict";
 
 //If the population number is below the popLimit, the town will be ignored
-var popLimit = 5000;
+var defPopLimit = 0,
+    popLimit;
 
 var get_names = require('./get_names'),
     get_bound = require('./get_bound'),
     fs = require('fs'),
+    arg,
     towns,
     bounds = {},
     boundNum = 0,
     actBound,
     file;
+
+// Handle args
+for( var i = process.argv.length - 1; i >= 2; i -= 1 ){
+    arg = process.argv[i].split("=");
+    // population limit
+    if( arg[0] === "limit" ) popLimit = arg[1]
+}
+popLimit = popLimit || defPopLimit;
+
+console.log("Getting the towns datas... Population limit: " + popLimit);
 
 towns = get_names(popLimit);
 
