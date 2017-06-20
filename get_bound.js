@@ -10,7 +10,7 @@ function getBound(town) {
         if (res) {
             process.stdout.clearLine();
             process.stdout.cursorTo(0);
-            process.stdout.write(town + " bounds added");
+            process.stdout.write(town + " bounds found");
             return res.geometry.viewport;
         }
         return undefined;
